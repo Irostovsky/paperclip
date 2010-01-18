@@ -1,0 +1,18 @@
+<p>
+  <b>Product:</b>
+  <%=h @avatar.product_id %>
+</p>
+
+<p>
+  <b>Main:</b>
+  <%=h @avatar.main %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @avatar.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_avatar_path(@avatar) %> |
+<%= link_to 'Back', avatars_path %>

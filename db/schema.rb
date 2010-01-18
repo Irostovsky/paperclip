@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100118051633) do
+ActiveRecord::Schema.define(:version => 20100118053313) do
+
+  create_table "avatars", :force => true do |t|
+    t.integer  "product_id"
+    t.boolean  "main"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "name"
