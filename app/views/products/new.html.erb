@@ -15,7 +15,15 @@
     <%= f.label :sale %><br />
     <%= f.check_box :sale %>
   </p>
+  <p>
   <%= f.file_field :photo %>
+  </p>
+
+  <% f.fields_for :avatars do |avatar_form| %>
+    <%= avatar_form.label :name %><br />
+    <%= avatar_form.text_field :name %>
+    <%= avatar_form.check_box :main %>
+  <% end %>
 
   <p>
     <%= f.submit 'Create' %>
